@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+</head>
+<body>
+<form method="post" action="/zy/addmessage">
+    <input type="text" name="message"/>
+    <input type="submit" name="submit"/>
+</form>
+            <table>
+                <tr th:each="message : ${messages}">
+                    <td th:text="${message.message}"></td>
+                </tr>
+            </table>
+</body>
+</html>
